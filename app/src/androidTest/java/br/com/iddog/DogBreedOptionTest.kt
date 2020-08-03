@@ -28,25 +28,25 @@ class DogBreedOptionTest {
 
     @Test
     fun checkHuskyTextChangeWhenPerfomClick() {
-        onView(withId(R.id.ivHusky)).perform(scrollTo()).perform(click())
+        onView(withId(R.id.ivHusky)).perform(click())
         onView(withId(R.id.mbDogChoseed)).check(matches(withText("Prosseguir com husky")))
     }
 
     @Test
     fun checkLabradorTextChangeWhenPerfomClick() {
-        onView(withId(R.id.ivLabrador)).perform(scrollTo()).perform(click())
+        onView(withId(R.id.ivLabrador)).perform(click())
         onView(withId(R.id.mbDogChoseed)).check(matches(withText("Prosseguir com labrador")))
     }
 
     @Test
     fun checkHoundTextChangeWhenPerfomClick() {
-        onView(withId(R.id.ivHound)).perform(scrollTo()).perform(click())
+        onView(withId(R.id.ivHound)).perform(click())
         onView(withId(R.id.mbDogChoseed)).check(matches(withText("Prosseguir com beagle")))
     }
 
     @Test
     fun checkPugTextChangeWhenPerfomClick() {
-        onView(withId(R.id.ivPug)).perform(scrollTo()).perform(click())
+        onView(withId(R.id.ivPug)).perform(click())
         onView(withId(R.id.mbDogChoseed)).check(matches(withText("Prosseguir com pug")))
     }
 }

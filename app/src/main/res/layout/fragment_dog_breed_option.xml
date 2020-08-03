@@ -1,72 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/dog_breed"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".presentation.view.breed.DogBreedOptionFragment">
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtvTitleDogBreed"
         style="@style/TextTitleViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginTop="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="start"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="15dp"
-        android:text="@string/title_dog_breed_option" />
+        android:layout_marginTop="60dp"
+        android:text="@string/title_dog_breed_option"
+        android:textColor="@android:color/white" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:orientation="horizontal">
+        android:gravity="center"
+        android:orientation="vertical">
 
-        <HorizontalScrollView
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="90dp">
 
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivHusky"
+                android:layout_width="@dimen/dog_breed_image_width"
+                android:layout_height="@dimen/dog_breed_image_height"
+                android:layout_margin="@dimen/dog_breed_option_spacing"
+                tools:background="@tools:sample/avatars" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ivHusky"
-                    android:layout_width="@dimen/dog_breed_image_width"
-                    android:layout_height="@dimen/dog_breed_image_height"
-                    android:layout_margin="@dimen/dog_breed_option_spacing"
-                    tools:background="@tools:sample/avatars" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivHound"
+                android:layout_width="@dimen/dog_breed_image_width"
+                android:layout_height="@dimen/dog_breed_image_height"
+                android:layout_margin="@dimen/dog_breed_option_spacing"
+                tools:background="@tools:sample/avatars" />
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ivHound"
-                    android:layout_width="@dimen/dog_breed_image_width"
-                    android:layout_height="@dimen/dog_breed_image_height"
-                    android:layout_margin="@dimen/dog_breed_option_spacing"
-                    tools:background="@tools:sample/avatars" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ivLabrador"
-                    android:layout_width="@dimen/dog_breed_image_width"
-                    android:layout_height="@dimen/dog_breed_image_height"
-                    android:layout_margin="@dimen/dog_breed_option_spacing"
-                    tools:background="@tools:sample/avatars" />
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ivPug"
-                    android:layout_width="@dimen/dog_breed_image_width"
-                    android:layout_height="@dimen/dog_breed_image_height"
-                    android:layout_margin="@dimen/dog_breed_option_spacing"
-                    tools:background="@tools:sample/avatars" />
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivLabrador"
+                android:layout_width="@dimen/dog_breed_image_width"
+                android:layout_height="@dimen/dog_breed_image_height"
+                android:layout_margin="@dimen/dog_breed_option_spacing"
+                tools:background="@tools:sample/avatars" />
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPug"
+                android:layout_width="@dimen/dog_breed_image_width"
+                android:layout_height="@dimen/dog_breed_image_height"
+                android:layout_margin="@dimen/dog_breed_option_spacing"
+                tools:background="@tools:sample/avatars" />
 
-        </HorizontalScrollView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -79,9 +86,12 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="20dp"
+        android:layout_margin="30dp"
+        android:background="@drawable/button_shape"
         android:text="@string/next_with"
+        android:textColor="@android:color/white"
         android:visibility="invisible"
+        app:backgroundTint="@color/colorPrimary"
         tools:visibility="visible" />
 
 </RelativeLayout>

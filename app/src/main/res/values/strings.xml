@@ -12,4 +12,5 @@
     <string name="user_account_incorrect_email">E-mail inválido</string>
     <string name="user_account_connection_error">Revise a sua conexão e tente novamente</string>
     <string name="user_account_unknown_error">Erro inesperado, tente novamente</string>
+    <string name="enter_user_account_button">Entrar</string>
 </resources>

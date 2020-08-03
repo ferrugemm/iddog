@@ -9,18 +9,18 @@
         android:id="@+id/appCompatImageView"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        app:lottie_fileName="peoples.json"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
+        app:lottie_fileName="peoples.json"
         app:lottie_loop="true" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/appCompatTextView"
+        style="@style/TextTitleViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/TextTitleViewStyle"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:text="@string/title_lets_begin"
@@ -29,9 +29,9 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/appCompatTextView2"
+        style="@style/TextSubtitleViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/TextSubtitleViewStyle"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:text="@string/subtitle_lets_begin"
@@ -44,8 +44,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="52dp"
+        android:layout_marginEnd="20dp"
         android:hint="@string/hint_email_input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,19 +54,24 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text" />
+            android:inputType="textEmailAddress" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
         android:id="@+id/buttonEnter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
         android:layout_margin="40dp"
-        app:srcCompat="@drawable/ic_baseline_arrow_forward"
-        app:tint="@android:color/white"
+        android:background="@drawable/button_shape"
+        android:gravity="center"
+        android:text="@string/enter_user_account_button"
+        android:textColor="@android:color/white"
         app:backgroundTint="@color/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:spinning_bar_color="#FFF"
+        app:spinning_bar_padding="6dp"
+        app:spinning_bar_width="4dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
