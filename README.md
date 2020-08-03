@@ -5,6 +5,7 @@ IdDog a aplicação Android do desafio da [idwall](https://idwall.co/)
 ## Começando
 
 Para começar a usar, basta entrar com seu e-mail e a autenticação estará sendo processada.
+
 Você poderá ver fotos de raças de cachorros, entre eles, husky, beagle, labrador e pug xD
 
 ### Pré-requisitos
@@ -22,6 +23,9 @@ Você poderá ver fotos de raças de cachorros, entre eles, husky, beagle, labra
     1. Clone o projeto
     2. Abra o projeto em qualquer versão do Android Studio
 ```
+
+### Demonstração
+![demo]()
 
 ## Arquitetura
 
