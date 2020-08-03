@@ -1,17 +1,112 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version = "1.3.72"
+    ext.kotlinVersion = "1.3.72"
+
+    ext.versions = [
+            'minAndroidSdk'    : 16,
+            'compileAndroidSdk': 30,
+            'buildTools'       : '30.0.0',
+            'gradle'           : '4.0.1',
+
+            'appCompat'        : '1.1.0',
+            'airbnb'           : '3.4.1',
+            'coreKtx'          : '1.3.1',
+            'coroutines'       : '1.3.8',
+            'constraintLayout' : '1.1.3',
+            'coroutinesCore'   : '1.3.8',
+            'koin'             : '2.1.5',
+            'material'         : '1.1.0',
+            'mockWebServer'    : '2.7.5',
+            'room'             : '2.2.5',
+            'navigation'       : '2.3.0',
+            'retrofit'         : '2.9.0',
+            'viewmodelKtx'     : '2.2.0',
+            'lifecycleKtx'     : '2.2.0',
+            'coil'             : '0.11.0',
+            'moshi'            : '1.9.3',
+
+            'junit'            : '4.13',
+            'junitAndroidX'    : '1.1.1',
+            'espresso'         : '3.2.0',
+            'extMockk'         : '1.10.0',
+            'roomTest'         : '2.2.5',
+            'runner'           : '1.2.0',
+            'rules'            : '1.2.0',
+
+            'sourceCompat'     : JavaVersion.VERSION_1_8,
+            'targetCompat'     : JavaVersion.VERSION_1_8
+    ]
+
+    ext.deps = [
+            kotlin  : [
+                    'stdlib'    : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
+                    'coroutines': "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}"
+            ],
+
+            android : [
+                    'core'              : "androidx.core:core:${versions.core}",
+                    'coreKtx'           : "androidx.core:core-ktx:${versions.coreKtx}",
+                    'appCompat'         : "androidx.appcompat:appcompat:${versions.appCompat}",
+                    'constraintLayout'  : "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}",
+
+                    'fragmentKtx'       : "androidx.fragment:fragment-ktx:${versions.fragmentKtx}",
+
+                    'lifecycleKtx'      : "androidx.lifecycle:lifecycle-extensions:${versions.lifecycleKtx}",
+                    'lifecycleRuntime'  : "androidx.lifecycle:lifecycle-runtime-ktx:${versions.lifecycleKtx}",
+                    'viewmodelKtx'      : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.viewmodelKtx}",
+                    'liveDataKtx'       : "androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycleKtx}",
+                    'multidex'          : "androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycleKtx}",
+
+                    'navigationFragment': "androidx.navigation:navigation-fragment-ktx:${versions.navigation}",
+                    'navigationUi'      : "androidx.navigation:navigation-ui-ktx:${versions.navigation}",
+                    'roomRuntime'       : "androidx.room:room-runtime:${versions.room}",
+                    'roomKtx'           : "androidx.room:room-ktx:${versions.room}",
+                    'roomCompiler'      : "androidx.room:room-compiler:${versions.room}"
+            ],
+            coil    : [
+                    'coil': "io.coil-kt:coil:${versions.coil}"
+            ],
+
+            airbnb  : [
+                    'lottie': "com.airbnb.android:lottie:${versions.airbnb}",
+            ],
+
+            squareup: [
+                    'moshi'        : "com.squareup.moshi:moshi-kotlin:${versions.moshi}",
+                    'moshiCodeGen' : "com.squareup.moshi:moshi-kotlin-codegen:${versions.moshi}",
+                    'retrofitMoshi': "com.squareup.retrofit2:converter-moshi:${versions.retrofit}",
+                    'retrofit'     : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
+                    'mockWebServer': "com.squareup.okhttp:mockwebserver:${versions.mockWebServer}"
+            ],
+
+            koin    : [
+                    'koinAndroid'          : "org.koin:koin-android:${versions.koin}",
+                    'koinAndroidXScope'    : "org.koin:koin-androidx-scope:${versions.koin}",
+                    'koinAndroidXViewModel': "org.koin:koin-androidx-viewmodel:${versions.koin}",
+            ],
+
+            google  : [
+                    'material': "com.google.android.material:material:${versions.material}"
+            ],
+
+            test    : [
+                    'junitAndroidX': "androidx.test.ext:junit:${versions.junitAndroidX}",
+                    'junit'        : "junit:junit:${versions.junit}",
+                    'espresso'     : "androidx.test.espresso:espresso-core:${versions.espresso}",
+                    'mockk'        : "io.mockk:mockk:${versions.extMockk}",
+                    'androidRunner': "androidx.test:runner:${versions.runner}",
+                    'androidRules' : "androidx.test:rules:${versions.rules}",
+                    'room'         : "androidx.room:room-testing:${versions.roomTest}",
+            ]
+    ]
+
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.0.1"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.0"
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath "com.android.tools.build:gradle:${versions.gradle}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:${versions.navigation}"
     }
 }
 

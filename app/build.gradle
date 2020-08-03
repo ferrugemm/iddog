@@ -7,13 +7,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.0"
+    compileSdkVersion versions.compileAndroidSdk
+    buildToolsVersion versions.buildTools
 
     defaultConfig {
         applicationId "br.com.iddog"
-        minSdkVersion 16
-        targetSdkVersion 30
+        minSdkVersion versions.minAndroidSdk
+        targetSdkVersion versions.compileAndroidSdk
         versionCode 1
         versionName "1.0"
         multiDexEnabled true
@@ -30,66 +30,73 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility versions.sourceCompat
+        targetCompatibility versions.targetCompat
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8
+        jvmTarget = versions.targetCompat
         freeCompilerArgs = ["-Xallow-result-return-type"]
     }
 
     dexOptions {
         preDexLibraries = false
     }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude("META-INF/*.kotlin_module")
+    }
 }
 
 dependencies {
-    implementation 'com.google.android.material:material:1.1.0'
+    implementation deps.google.material
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.8'
+    implementation deps.kotlin.stdlib
+    implementation deps.kotlin.coroutines
 
-    implementation "org.koin:koin-android:2.1.5"
-    implementation "org.koin:koin-androidx-scope:2.1.5"
-    implementation "org.koin:koin-androidx-viewmodel:2.1.5"
+    implementation deps.koin.koinAndroid
+    implementation deps.koin.koinAndroidXScope
+    implementation deps.koin.koinAndroidXViewModel
 
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.moshi:moshi:1.9.3'
-    implementation 'com.squareup.moshi:moshi-kotlin:1.9.3'
-    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    kapt 'com.squareup.moshi:moshi-kotlin-codegen:1.9.3'
-    testImplementation "com.squareup.okhttp:mockwebserver:2.7.5"
+    implementation deps.squareup.retrofit
+    implementation deps.squareup.retrofitMoshi
+    implementation deps.squareup.moshi
+    implementation deps.squareup.moshiCodeGen
+    kapt deps.squareup.moshiCodeGen
 
-    implementation "com.airbnb.android:lottie:3.4.1"
+    implementation deps.airbnb.lottie
 
-    implementation 'androidx.core:core-ktx:1.3.1'
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation "androidx.room:room-runtime:2.2.5"
-    implementation "androidx.room:room-ktx:2.2.5"
-    implementation "androidx.navigation:navigation-fragment-ktx:2.3.0"
-    implementation "androidx.navigation:navigation-ui-ktx:2.3.0"
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
-    implementation "androidx.multidex:multidex:2.0.1"
+    implementation deps.android.lifecycleKtx
+    implementation deps.android.coreKtx
+    implementation deps.android.appCompat
+    implementation deps.android.constraintLayout
+    implementation deps.android.roomKtx
+    implementation deps.android.roomRuntime
+    implementation deps.android.navigationFragment
+    implementation deps.android.navigationUi
+    implementation deps.android.viewmodelKtx
+    implementation deps.android.liveDataKtx
+    implementation deps.android.lifecycleRuntime
+    implementation deps.android.multidex
+    kapt deps.android.roomCompiler
 
-    kapt "androidx.room:room-compiler:2.2.5"
+    implementation deps.coil.coil
 
-    implementation("io.coil-kt:coil:0.11.0")
+    testImplementation deps.squareup.mockWebServer
+    testImplementation deps.test.junit
+    testImplementation deps.test.mockk
+    testImplementation deps.test.room
 
-    testImplementation 'junit:junit:4.13'
-
-    testImplementation "io.mockk:mockk:1.10.0"
-
-    testImplementation "androidx.room:room-testing:2.2.5"
-
-    androidTestImplementation "org.koin:koin-test:2.1.5"
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    androidTestImplementation 'androidx.test:runner:1.2.0'
-    androidTestImplementation 'androidx.test:rules:1.2.0'
+    androidTestImplementation deps.test.junitAndroidX
+    androidTestImplementation deps.test.espresso
+    androidTestImplementation deps.test.androidRunner
+    androidTestImplementation deps.test.androidRules
 }
