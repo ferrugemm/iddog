@@ -12,11 +12,11 @@
     </style>
 
     <style name="TextTitleViewStyle" parent="TextAppearance.AppCompat.Title">
-        <item name="android:textSize">30sp</item>
+        <item name="android:textSize">26sp</item>
     </style>
 
     <style name="TextSubtitleViewStyle" parent="TextAppearance.AppCompat.Body1">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">15sp</item>
     </style>
 
     <style name="TextInputLayoutViewStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox" />

@@ -9,11 +9,13 @@
         android:id="@+id/appCompatImageView"
         android:layout_width="match_parent"
         android:layout_height="300dp"
+        android:background="#3C3872"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_fileName="peoples.json"
+        android:scaleType="centerInside"
         app:lottie_loop="true" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -21,6 +23,7 @@
         style="@style/TextTitleViewStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:text="@string/title_lets_begin"
