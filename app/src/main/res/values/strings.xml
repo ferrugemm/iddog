@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Iddog</string>
+    <string name="next_with">Prosseguir com %1$s</string>
+    <string name="labrador_category">labrador</string>
+    <string name="husky_category">husky</string>
+    <string name="pug_category">pug</string>
+    <string name="hound_category">beagle</string>
+    <string name="title_lets_begin">Vamos começar</string>
+    <string name="subtitle_lets_begin">Preencha seu e-mail e vamos lá!</string>
+    <string name="hint_email_input">E-mail</string>
+    <string name="title_dog_breed_option">Escolha uma raça canina</string>
+    <string name="user_account_incorrect_email">E-mail inválido</string>
+    <string name="user_account_connection_error">Revise a sua conexão e tente novamente</string>
+    <string name="user_account_unknown_error">Erro inesperado, tente novamente</string>
+</resources>
