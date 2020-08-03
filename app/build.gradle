@@ -88,6 +88,8 @@ dependencies {
     implementation deps.android.multidex
     kapt deps.android.roomCompiler
 
+    implementation deps.simplePass.loadingButton
+
     implementation deps.coil.coil
 
     testImplementation deps.squareup.mockWebServer

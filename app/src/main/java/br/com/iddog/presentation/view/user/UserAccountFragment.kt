@@ -30,6 +30,7 @@ class UserAccountFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         buttonEnter.setOnClickListener {
+            buttonEnter.startAnimation()
             userAccountViewModel.signUpUser(tiUserIdentifier.editText?.text.toString())
         }
 
@@ -42,6 +43,7 @@ class UserAccountFragment : Fragment() {
                 UserAccountStates.NetworkError -> Toast.makeText(requireContext(), getString(R.string.user_account_connection_error), Toast.LENGTH_LONG).show()
                 else -> Toast.makeText(requireContext(), getString(R.string.user_account_unknown_error), Toast.LENGTH_LONG).show()
             }
+            buttonEnter.revertAnimation()
         })
 
         tiUserIdentifier.editText?.addTextChangedListener {

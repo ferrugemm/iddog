@@ -20,6 +20,7 @@ buildscript {
             'navigation'       : '2.3.0',
             'retrofit'         : '2.9.0',
             'viewmodelKtx'     : '2.2.0',
+            'loadingButton'    : '2.1.5',
             'lifecycleKtx'     : '2.2.0',
             'coil'             : '0.11.0',
             'moshi'            : '1.9.3',
@@ -37,12 +38,12 @@ buildscript {
     ]
 
     ext.deps = [
-            kotlin  : [
+            kotlin    : [
                     'stdlib'    : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion",
                     'coroutines': "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}"
             ],
 
-            android : [
+            android   : [
                     'core'              : "androidx.core:core:${versions.core}",
                     'coreKtx'           : "androidx.core:core-ktx:${versions.coreKtx}",
                     'appCompat'         : "androidx.appcompat:appcompat:${versions.appCompat}",
@@ -62,15 +63,15 @@ buildscript {
                     'roomKtx'           : "androidx.room:room-ktx:${versions.room}",
                     'roomCompiler'      : "androidx.room:room-compiler:${versions.room}"
             ],
-            coil    : [
+            coil      : [
                     'coil': "io.coil-kt:coil:${versions.coil}"
             ],
 
-            airbnb  : [
+            airbnb    : [
                     'lottie': "com.airbnb.android:lottie:${versions.airbnb}",
             ],
 
-            squareup: [
+            squareup  : [
                     'moshi'        : "com.squareup.moshi:moshi-kotlin:${versions.moshi}",
                     'moshiCodeGen' : "com.squareup.moshi:moshi-kotlin-codegen:${versions.moshi}",
                     'retrofitMoshi': "com.squareup.retrofit2:converter-moshi:${versions.retrofit}",
@@ -78,17 +79,21 @@ buildscript {
                     'mockWebServer': "com.squareup.okhttp:mockwebserver:${versions.mockWebServer}"
             ],
 
-            koin    : [
+            koin      : [
                     'koinAndroid'          : "org.koin:koin-android:${versions.koin}",
                     'koinAndroidXScope'    : "org.koin:koin-androidx-scope:${versions.koin}",
                     'koinAndroidXViewModel': "org.koin:koin-androidx-viewmodel:${versions.koin}",
             ],
 
-            google  : [
+            simplePass: [
+                    'loadingButton': "br.com.simplepass:loading-button-android:${versions.loadingButton}"
+            ],
+
+            google    : [
                     'material': "com.google.android.material:material:${versions.material}"
             ],
 
-            test    : [
+            test      : [
                     'junitAndroidX': "androidx.test.ext:junit:${versions.junitAndroidX}",
                     'junit'        : "junit:junit:${versions.junit}",
                     'espresso'     : "androidx.test.espresso:espresso-core:${versions.espresso}",

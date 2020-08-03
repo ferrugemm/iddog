@@ -13,7 +13,8 @@
         tools:layout="@layout/fragment_user_account">
         <action
             android:id="@+id/action_userAccountFragment_to_dogBreedOptionFragment"
-            app:destination="@id/dogBreedOptionFragment" />
+            app:destination="@id/dogBreedOptionFragment"
+            app:enterAnim="@anim/fragment_open_enter" />
     </fragment>
 
     <fragment
@@ -23,7 +24,9 @@
         tools:layout="@layout/fragment_dog_breed_option">
         <action
             android:id="@+id/action_dogBreedOptionFragment_to_dogBreedListFragment"
-            app:destination="@id/dogBreedListFragment" />
+            app:destination="@id/dogBreedListFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit" />
     </fragment>
 
     <fragment
@@ -37,7 +40,11 @@
             app:nullable="false" />
         <action
             android:id="@+id/action_dogBreedListFragment_to_dogBreedDetailFragment"
-            app:destination="@id/dogBreedDetailFragment" />
+            app:destination="@id/dogBreedDetailFragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit"
+            app:popEnterAnim="@anim/fragment_fade_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"/>
     </fragment>
     <fragment
         android:id="@+id/dogBreedDetailFragment"
