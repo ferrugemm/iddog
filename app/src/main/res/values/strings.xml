@@ -8,7 +8,7 @@
     <string name="title_lets_begin">Vamos começar</string>
     <string name="subtitle_lets_begin">Preencha seu e-mail e vamos lá!</string>
     <string name="hint_email_input">E-mail</string>
-    <string name="title_dog_breed_option">Escolha uma raça canina</string>
+    <string name="title_dog_breed_option">Escolha uma \nraça canina</string>
     <string name="user_account_incorrect_email">E-mail inválido</string>
     <string name="user_account_connection_error">Revise a sua conexão e tente novamente</string>
     <string name="user_account_unknown_error">Erro inesperado, tente novamente</string>

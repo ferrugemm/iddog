@@ -2,19 +2,15 @@ package br.com.iddog.presentation.view.breed
 
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.inflate
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import br.com.iddog.R
-import coil.Coil
-import coil.ImageLoader
 import coil.api.load
-import coil.request.LoadRequest
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.row_dog_breed.view.*
 
-class DogBreedOptionAdapter :
-    RecyclerView.Adapter<DogBreedOptionAdapter.DogBreedOptionViewHolder>() {
+class DogBreedAdapter :
+    RecyclerView.Adapter<DogBreedAdapter.DogBreedOptionViewHolder>() {
     private val dogBreedsPhotos = mutableListOf<String>()
     private var dogBreedsPhoto: (String) -> Unit = {}
 

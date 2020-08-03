@@ -10,14 +10,13 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import br.com.iddog.R
 import br.com.iddog.presentation.viewmodel.breed.DogBreedListViewModel
-import coil.ImageLoader
 import kotlinx.android.synthetic.main.fragment_dog_breed_list.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DogBreedListFragment : Fragment() {
     private val dogBreedListViewModel by viewModel<DogBreedListViewModel>()
     private val dogBreedCategory: DogBreedListFragmentArgs by navArgs()
-    private val dogBreedOptionAdapter by lazy { DogBreedOptionAdapter() }
+    private val dogBreedOptionAdapter by lazy { DogBreedAdapter() }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
