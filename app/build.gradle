@@ -15,7 +15,7 @@ android {
         minSdkVersion versions.minAndroidSdk
         targetSdkVersion versions.compileAndroidSdk
         versionCode 1
-        versionName "1.0"
+        versionName "0.1.0"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary true
 
