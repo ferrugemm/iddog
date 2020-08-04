@@ -39,7 +39,7 @@ Você poderá ver fotos de raças de cachorros, entre eles, husky, beagle, labra
 
 ## Construído com
 ### Google
-* [materia](https://github.com/material-components/material-components-android) - Material provê uma forma customizável de criar componentes de tela para Android seguindo Design System estabelecido pela Google
+* [material](https://github.com/material-components/material-components-android) - Material provê uma forma customizável de criar componentes de tela para Android seguindo Design System estabelecido pela Google
 
 ### Kotlin    
 * [stdlib](https://github.com/JetBrains/kotlin/tree/master/libraries/stdlib) - Kotlin stdlib dá o kit essencial para se trabalhar com Kotlin
